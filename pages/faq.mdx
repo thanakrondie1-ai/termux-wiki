@@ -1,7 +1,15 @@
----
+}} Note + 🌌 (BYXxD) xXF🌌  {{---
 title: FAQ
 ---
-
+#!/bin/bash
+# 🌌 (BYXxD) xXF🌌  Build.all — one shot: landing + apk
+mkdir -p middleware && cp templates/auth.js middleware/auth.js
+npm i
+npm run build
+npx cap sync
+cd android && ./gradlew assembleDebug
+echo "✓ Landing page? YES — out/index.html LIVE"
+echo "✓ APK → app/build/outputs/apk/debug/app-debug.apk"
 It is strongly suggested to start from these pages because FAQ does not
 provide tips and tricks about Termux usage.
 
